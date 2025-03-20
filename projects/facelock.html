@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafePath - Project</title>
+    <link rel="stylesheet" href="projects.css"> <!-- Correct path to styles.css -->
+</head>
+<body>
+    <header>
+        <div class="left-align">
+            <a href="../index.html">Prabhav Singh</a> <!-- Link to main portfolio page -->
+        </div>
+    </header>
+
+    <section id="project-details" class="section">
+        <h2>🔥 FaceLock: Biometric-Based Security System</h2>
+        <p><strong>FaceLock</strong> is a cutting-edge biometric security system that uses face recognition and Firebase integration to provide secure access to devices and systems.</p>
+        
+        <div class="project-info">
+            <h3>1️⃣ AI-Based Face Recognition</h3>
+            <ul>
+                <li>✅ Uses OpenCV and Face Recognition library to detect faces.</li>
+                <li>✅ Compares detected faces with pre-stored images.</li>
+                <li>✅ Runs on a computer (Python script + Tkinter GUI).</li>
+            </ul>
+
+            <h3>2️⃣ Firebase Realtime Database Integration</h3>
+            <ul>
+                <li>✅ Stores access status ("Yes" or "No") in Firebase.</li>
+                <li>✅ The ESP32 reads the database to control hardware components.</li>
+                <li>✅ Cloud-based solution enables remote monitoring.</li>
+            </ul>
+
+            <h3>3️⃣ ESP32-Based Smart Lock System</h3>
+            <ul>
+                <li>✅ ESP32 fetches access status from Firebase and controls hardware.</li>
+                <li>✅ Servo Motor acts as a door lock:
+                    <ul>
+                        <li>Opens (90°) when "Yes" is detected.</li>
+                        <li>Closes (0°) when "No" is detected.</li>
+                    </ul>
+                </li>
+                <li>✅ LED Indicators:
+                    <ul>
+                        <li>Red LED ON → Access Denied</li>
+                        <li>Green LED ON → Access Granted</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>4️⃣ Wireless & IoT Connectivity</h3>
+            <ul>
+                <li>✅ Works over WiFi, allowing remote access control.</li>
+                <li>✅ Can be expanded with Telegram Bot integration for alerts.</li>
+                <li>✅ Works with mobile hotspots & home networks.</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Prabhav Singh. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

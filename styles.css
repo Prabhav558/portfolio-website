@@ -1,0 +1,356 @@
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+    color: #fff;
+    scroll-behavior: smooth;
+    transition: background 0.5s ease-in-out;
+    overflow: hidden; /* Hide horizontal scrollbar */
+    overflow-y: scroll; /* Enable vertical scrolling */
+    scrollbar-width: none; /* Firefox */
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Edge */
+}
+
+/* Navigation */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(30, 30, 30, 0.9);
+    padding: 1rem 2rem;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Navigation Alignment */
+.right-align {
+    display: flex;
+    gap: 20px;
+    margin-right: 40px;
+}
+
+.left-align {
+    color: #f4f4f7;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 1000px; /* Space between the name and the nav links */
+    text-shadow: 4px 4px 10px rgba(0, 173, 181, 0.5);
+}
+
+.right-align a {
+    color: #24b8c0;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s, transform 0.3s;
+    white-space: nowrap; /* Prevents wrapping issues */
+}
+
+.right-align a:hover {
+    color: #007a83;
+    transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    width: 100vw;
+}
+
+/* Full-screen Image */
+.hero-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('assets/images/profile.jpg') no-repeat center center/cover;
+    transition: opacity 1s ease-in-out;
+    z-index: -1;
+}
+
+/* Hero Content */
+.hero-content {
+    text-align: center;
+    margin-left: 900px;
+    z-index: 1;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Hero Headings */
+.hero h1 {
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 10px rgba(0, 173, 181, 0.5);
+}
+
+/* Subtext */
+.hero p {
+    font-size: 1.5rem;
+}
+
+/* Bio Section */
+.hero .bio {
+    max-width: 600px;
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+/* Button */
+.btn {
+    padding: 12px 24px;
+    background: #00adb5;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+/* Right Shift for the Button */
+.right-shift {
+    display: inline-block;
+    margin-left: 40px; /* Adjust this value if needed */
+}
+
+.btn:hover {
+    background: #007a83;
+    transform: scale(1.05);
+}
+
+/* Scroll Effects */
+.scrolled .hero-bg {
+    opacity: 0;
+}
+
+/* Section Styling */
+.section {
+    padding: 4rem 2rem;
+    text-align: center;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Project Grid */
+.project-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background: #222;
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 173, 181, 0.4);
+}
+
+.project-card a {
+    text-decoration: none; /* Remove underline from the link */
+}
+
+.project-btn {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: center;
+    display: block;
+    color: #fff;
+    cursor: pointer;
+    padding: 20px;
+    background: #444; /* Background color for the button */
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.project-btn:hover {
+    background-color: #00adb5; /* Change color on hover */
+    transform: scale(1.05);
+}
+
+.project-btn h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.project-btn p {
+    font-size: 1.1rem;
+    color: #ccc;
+}
+
+/* Skills Section */
+.skills-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skills-list li {
+    padding: 10px 15px;
+    background: #00adb5;
+    border-radius: 5px;
+}
+
+/* Contact Section */
+.social-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links a {
+    font-size: 2rem;
+    color: #00adb5;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #007a83;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #1e1e1e;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Styling for the Social Links */
+.social-links {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between icons */
+}
+
+.social-links li {
+    font-size: 2rem;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-links li a {
+    color: #fff; /* Default color for the icons */
+    text-decoration: none;
+}
+
+.social-links li:hover {
+    color: #00adb5; /* Color change on hover */
+    transform: scale(1.1); /* Slight scale-up on hover */
+}
+
+.social-links i {
+    transition: color 0.3s ease-in-out;
+}
+
+.social-links li a:hover i {
+    color: #24b8c0; /* Color change for the icon on hover */
+}
+
+/* Social Links Container */
+.social-links-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2x2 grid layout */
+    column-gap: 2rem; /* Smaller space between items */
+    row-gap: 1rem;
+    padding-left: 450px;
+    padding-right: 450px;
+    text-align: left;
+}
+
+/* Social Link Styling */
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Less space between icon and text */
+    background: #333; /* Dark background for a clean look */
+    padding: 8px 12px; /* Smaller padding for compact look */
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    font-size: 1rem; /* Smaller text size */
+}
+
+.social-link a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    gap: 8px;
+    font-size: 1rem;
+}
+
+.social-link i {
+    font-size: 1.3rem; /* Adjust icon size */
+    color: #00adb5;
+}
+
+.social-link span {
+    color: #ddd;
+    font-size: 0.9rem; /* Smaller font size for text */
+}
+
+/* Hover effect */
+.social-link:hover {
+    background: #444;
+    transform: translateY(-5px); /* Lift effect */
+}
+
+.social-link:hover i {
+    color: #24b8c0;
+}
+
+.social-link:hover span {
+    color: #24b8c0;
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 768px) {
+    .social-links-container {
+        grid-template-columns: 1fr; /* Stack items on smaller screens */
+    }
+}
+
+.aboutme {
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    font-size: large;
+}
